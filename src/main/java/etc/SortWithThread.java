@@ -24,6 +24,8 @@ public class SortWithThread extends Thread {
             int[] left;
             int[] right;
 
+            System.out.println(super.getId());
+
             if ( array.length <= 1 ) {
                 sortedArray = array;
             } else {

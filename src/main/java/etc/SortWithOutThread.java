@@ -9,6 +9,14 @@ public class SortWithOutThread {
         this.array = array;
     }
 
+    public static void showArray(int[] array) {
+        System.out.print("SortWithOutThread::");
+        for(int i = 0; i < array.length; i ++) {
+            System.out.print(array[i]);
+        }
+        System.out.println();
+    }
+
     public int[] getSortedArray() {
         return sortedArray;
     }
@@ -27,7 +35,6 @@ public class SortWithOutThread {
 
             System.arraycopy(array, 0, left, 0, middle );
             System.arraycopy(array, middle, right, 0, array.length - middle );
-
             SortWithOutThread leftSort = new SortWithOutThread( left );
             SortWithOutThread rightSort = new SortWithOutThread( right );
 
